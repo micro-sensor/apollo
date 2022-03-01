@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+
+    <title>MSANose Report</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">MSANose Report</a>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Issues
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index.html">Overview</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="shared-libraries.html">Shared Libraries</a></li>
+                            <li><a class="dropdown-item" href="unversioned-apis.html">Unversioned API</a></li>
+                            <li><a class="dropdown-item" href="too-many-standards.html">Too Many Standards</a></li>
+                            <li><a class="dropdown-item" href="shared-persistence.html">Shared Persistence</a></li>
+                            <li><a class="dropdown-item" href="microservices-greedy.html">Microservice Greedy</a></li>
+                            <li><a class="dropdown-item" href="inappropriate-service-intimacy.html">Inappropriate Service Intimacy (ISI)</a></li>
+                            <li><a class="dropdown-item" href="hardcoded-endpoints.html">Hardcoded Endpoints</a></li>
+                            <li><a class="dropdown-item" href="esb.html">Enterprise Service Bus Usage (ESB)</a></li>
+                            <li><a class="dropdown-item" href="wrong-cuts.html">Wrong Cuts</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="p-5 mb-5">
+        <div class="bd-intro">
+            <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+                <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/edson-a-soares/msanose-action" title="View and edit this file on GitHub" target="_blank" rel="noopener">View More on GitHub</a>
+                <h2 class="bd-title" id="content">Unversioned APIs</h2>
+            </div>
+            <p class="bd-lead">All Application Programming Interfaces (API) should be versioned to keep track of changes properly</p>
+        </div>
+        <hr/>
+
+        <section>
+            <div class="row">
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Endpoint</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches/{branchName}</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/gray-del-releases</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>/prefix-path</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>/by-release</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>/envs</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>/apps/{appId}/namespaces/{namespaceName}/roles/{roleType}</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/releases</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>/apps/{appId}/namespaces/{namespaceName}/permissions/{permissionType}</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>/apps/{appId}/permissions/{permissionType}</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>/services/meta</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>/favorites</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>app</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/item</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/missing-namespaces</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>/apps/{appId}/namespaces/publish_info</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>/{appId}/navtree</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>/apps/{appId:.+}</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>/{appId}/miss_envs</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>/envs/{env}/instances/by-namespace/count</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/branches/{branchName}/items</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>/apps/{appId}/unique</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/comment_items</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>version</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/commits</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>/</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>/page-settings</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/items/{key:.+}</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>/apps/{appId}/envs/{env}/namespaces/{namespaceName}/roles/{roleType}</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>/app/apps/search/by-appid-or-name</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>/sso_heartbeat</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>/admin</td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>/apps/by-owner</td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>server</td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/updateAndPublish</td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>/apps/{appId}/envs/{env}/namespaces/{namespaceName}/permissions/{permissionType}</td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/releases/active</td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>/apps/{appId}/navtree</td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>/appnamespaces/public</td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>/envs/{env}/instances/by-namespace-and-releases-not-in</td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>/releases/{releaseId}</td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/branches</td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>/openapi/v1/apps</td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName:.+}</td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>/apps/{appId}/namespaces</td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>/users/{userId}</td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items/export</td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td>openapiAppController/apps/authorized</td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>/by-owner</td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td>/favorites/{favoriteId}</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>/apps/{appId}/role_users</td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/items/deleted</td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/commit</td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/releases/histories</td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>/releases/histories/by_previous_release_id_and_operation</td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>/instances/by-namespace-and-releases-not-in</td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>/system/role/createApplication</td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/associated-public-namespace</td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>/instances/by-namespace</td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/items</td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/releases/all</td>
+                        </tr>
+                        <tr>
+                            <td>61</td>
+                            <td>/envs/{env}/instances/by-release</td>
+                        </tr>
+                        <tr>
+                            <td>62</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/items/{itemId}</td>
+                        </tr>
+                        <tr>
+                            <td>63</td>
+                            <td>/instances/by-release</td>
+                        </tr>
+                        <tr>
+                            <td>64</td>
+                            <td>/notifications/v2</td>
+                        </tr>
+                        <tr>
+                            <td>65</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches/{branchName}/rules</td>
+                        </tr>
+                        <tr>
+                            <td>66</td>
+                            <td>/meta</td>
+                        </tr>
+                        <tr>
+                            <td>67</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/releases/latest</td>
+                        </tr>
+                        <tr>
+                            <td>68</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items/import</td>
+                        </tr>
+                        <tr>
+                            <td>69</td>
+                            <td>/namespaces/find-by-item</td>
+                        </tr>
+                        <tr>
+                            <td>70</td>
+                            <td>/apps/{appId}/clusters</td>
+                        </tr>
+                        <tr>
+                            <td>71</td>
+                            <td>/by-namespace/count</td>
+                        </tr>
+                        <tr>
+                            <td>72</td>
+                            <td>/envs/{env}/instances/by-namespace</td>
+                        </tr>
+                        <tr>
+                            <td>73</td>
+                            <td>openapiReleaseController/releases/{releaseId}/rollback</td>
+                        </tr>
+                        <tr>
+                            <td>74</td>
+                            <td>/apps/{appId}/appnamespaces/{namespaceName:.+}</td>
+                        </tr>
+                        <tr>
+                            <td>75</td>
+                            <td>/configs/export</td>
+                        </tr>
+                        <tr>
+                            <td>76</td>
+                            <td>/envs/{env}/releases/{releaseId}</td>
+                        </tr>
+                        <tr>
+                            <td>77</td>
+                            <td>/appnamespaces/{publicNamespaceName}/namespaces</td>
+                        </tr>
+                        <tr>
+                            <td>78</td>
+                            <td>/server/config/{key:.+}</td>
+                        </tr>
+                        <tr>
+                            <td>79</td>
+                            <td>/envs/{env}/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/associated-public-namespace</td>
+                        </tr>
+                        <tr>
+                            <td>80</td>
+                            <td>/envs/{env}/releases/{releaseId}/rollback</td>
+                        </tr>
+                        <tr>
+                            <td>81</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces</td>
+                        </tr>
+                        <tr>
+                            <td>82</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces</td>
+                        </tr>
+                        <tr>
+                            <td>83</td>
+                            <td>/notifications</td>
+                        </tr>
+                        <tr>
+                            <td>84</td>
+                            <td>/server/config</td>
+                        </tr>
+                        <tr>
+                            <td>85</td>
+                            <td>net</td>
+                        </tr>
+                        <tr>
+                            <td>86</td>
+                            <td>/by-namespace</td>
+                        </tr>
+                        <tr>
+                            <td>87</td>
+                            <td>/openapi/v1/envs/{env}/releases/{releaseId}/rollback</td>
+                        </tr>
+                        <tr>
+                            <td>88</td>
+                            <td>/system-info</td>
+                        </tr>
+                        <tr>
+                            <td>89</td>
+                            <td>/apps/{appId}/roles/{roleType}</td>
+                        </tr>
+                        <tr>
+                            <td>90</td>
+                            <td>/config</td>
+                        </tr>
+                        <tr>
+                            <td>91</td>
+                            <td>/user</td>
+                        </tr>
+                        <tr>
+                            <td>92</td>
+                            <td>/apps/{appId}/system/master/{userId}</td>
+                        </tr>
+                        <tr>
+                            <td>93</td>
+                            <td>/apps/{appId}/appnamespaces</td>
+                        </tr>
+                        <tr>
+                            <td>94</td>
+                            <td>/apps/{appId}/clusters/{clusterName:.+}</td>
+                        </tr>
+                        <tr>
+                            <td>95</td>
+                            <td>/envs/{env}/appnamespaces/{publicNamespaceName}/namespaces</td>
+                        </tr>
+                        <tr>
+                            <td>96</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items/{itemId}</td>
+                        </tr>
+                        <tr>
+                            <td>97</td>
+                            <td>/organizations</td>
+                        </tr>
+                        <tr>
+                            <td>98</td>
+                            <td>/releases/histories/by_release_id_and_operation</td>
+                        </tr>
+                        <tr>
+                            <td>99</td>
+                            <td>/releases/{releaseId}/rollback</td>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td>/items/{itemId}</td>
+                        </tr>
+                        <tr>
+                            <td>101</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/releases/histories</td>
+                        </tr>
+                        <tr>
+                            <td>102</td>
+                            <td>/{appId:.+}</td>
+                        </tr>
+                        <tr>
+                            <td>103</td>
+                            <td>/apps/{appId}/envs/{env}/namespaces/{namespaceName}/role_users</td>
+                        </tr>
+                        <tr>
+                            <td>104</td>
+                            <td>/apps/{appId}/cluster/{clusterName}/unique</td>
+                        </tr>
+                        <tr>
+                            <td>105</td>
+                            <td>/releases</td>
+                        </tr>
+                        <tr>
+                            <td>106</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/revoke-items</td>
+                        </tr>
+                        <tr>
+                            <td>107</td>
+                            <td>/openapi/v1/apps/authorized</td>
+                        </tr>
+                        <tr>
+                            <td>108</td>
+                            <td>/by-namespace-and-releases-not-in</td>
+                        </tr>
+                        <tr>
+                            <td>109</td>
+                            <td>/apps/{appId}/initPermission</td>
+                        </tr>
+                        <tr>
+                            <td>110</td>
+                            <td>/permissions/root</td>
+                        </tr>
+                        <tr>
+                            <td>111</td>
+                            <td>/system/role/manageAppMaster</td>
+                        </tr>
+                        <tr>
+                            <td>112</td>
+                            <td>/namespaces/{namespaceId}</td>
+                        </tr>
+                        <tr>
+                            <td>113</td>
+                            <td>/apps/{appId}/miss_envs</td>
+                        </tr>
+                        <tr>
+                            <td>114</td>
+                            <td>openapiAppController/apps</td>
+                        </tr>
+                        <tr>
+                            <td>115</td>
+                            <td>/users</td>
+                        </tr>
+                        <tr>
+                            <td>116</td>
+                            <td>/system/role/createApplication/{userId}</td>
+                        </tr>
+                        <tr>
+                            <td>117</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items</td>
+                        </tr>
+                        <tr>
+                            <td>118</td>
+                            <td>/apps</td>
+                        </tr>
+                        <tr>
+                            <td>119</td>
+                            <td>/apps/{appId}/namespaces/{namespaceName}/role_users</td>
+                        </tr>
+                        <tr>
+                            <td>120</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/branches</td>
+                        </tr>
+                        <tr>
+                            <td>121</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName:.+}</td>
+                        </tr>
+                        <tr>
+                            <td>122</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/itemset</td>
+                        </tr>
+                        <tr>
+                            <td>123</td>
+                            <td>/services/config</td>
+                        </tr>
+                        <tr>
+                            <td>124</td>
+                            <td>/services/admin</td>
+                        </tr>
+                        <tr>
+                            <td>125</td>
+                            <td>/appnamespaces/{publicNamespaceName}/associated-namespaces/count</td>
+                        </tr>
+                        <tr>
+                            <td>126</td>
+                            <td>/user/logout</td>
+                        </tr>
+                        <tr>
+                            <td>127</td>
+                            <td>/instances/by-namespace/count</td>
+                        </tr>
+                        <tr>
+                            <td>128</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/lock</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+    </div>
+
+    <div class="px-4">
+        <footer class="pt-5 my-5 text-muted border-top">MSA Nose &middot; &copy; 2022</footer>    </div>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js" ></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

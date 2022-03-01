@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+
+    <title>MSANose Report</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">MSANose Report</a>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Issues
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index.html">Overview</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="shared-libraries.html">Shared Libraries</a></li>
+                            <li><a class="dropdown-item" href="unversioned-apis.html">Unversioned API</a></li>
+                            <li><a class="dropdown-item" href="too-many-standards.html">Too Many Standards</a></li>
+                            <li><a class="dropdown-item" href="shared-persistence.html">Shared Persistence</a></li>
+                            <li><a class="dropdown-item" href="microservices-greedy.html">Microservice Greedy</a></li>
+                            <li><a class="dropdown-item" href="inappropriate-service-intimacy.html">Inappropriate Service Intimacy (ISI)</a></li>
+                            <li><a class="dropdown-item" href="hardcoded-endpoints.html">Hardcoded Endpoints</a></li>
+                            <li><a class="dropdown-item" href="esb.html">Enterprise Service Bus Usage (ESB)</a></li>
+                            <li><a class="dropdown-item" href="wrong-cuts.html">Wrong Cuts</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="p-5 mb-5">
+        <div class="bd-intro">
+            <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+                <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/edson-a-soares/msanose-action" title="View and edit this file on GitHub" target="_blank" rel="noopener">View More on GitHub</a>
+                <h2 class="bd-title" id="content">Shared Libraries (SL)</h2>
+            </div>
+            <p class="bd-lead">If microservices are coupled with a common library, that library should be refactored into a separate module. This reduces the fragility of the application by migrating the shared functionality behind a common, unchanging interface. This will make the system resistant to ripples from changes within the library.</p>
+        </div>
+        <hr/>
+
+        <section>
+            <div class="row">
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>Library</th>
+                        <th>Dependencies</th>
+                        <th>Microservices</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>com.ctrip.framework.apollo:apollo-client</td>
+                        <td>3</td>
+                        <td>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#com-ctrip-framework-apollo-apollo-client">
+                                See
+                            </button>
+
+                            <div class="modal fade" id=com-ctrip-framework-apollo-apollo-client tabindex="-1" aria-labelledby="gridModalLabel" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="gridModalLabel">Dependents of com.ctrip.framework.apollo:apollo-client</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid bd-example-row">
+                                                <div class="row">
+
+                                                    <ol class="list-group list-group-flush list-group-numbered">
+                                                        <li class="list-group-item list-group-item-action">null:apollo-mockserver</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-client-config-data</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-demo</li>
+                                                    </ol>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>org.springframework:spring-context</td>
+                        <td>2</td>
+                        <td>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#org-springframework-spring-context">
+                                See
+                            </button>
+
+                            <div class="modal fade" id=org-springframework-spring-context tabindex="-1" aria-labelledby="gridModalLabel" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="gridModalLabel">Dependents of org.springframework:spring-context</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid bd-example-row">
+                                                <div class="row">
+
+                                                    <ol class="list-group list-group-flush list-group-numbered">
+                                                        <li class="list-group-item list-group-item-action">null:apollo-demo</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-client</li>
+                                                    </ol>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>org.slf4j:jcl-over-slf4j</td>
+                        <td>2</td>
+                        <td>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#org-slf4j-jcl-over-slf4j">
+                                See
+                            </button>
+
+                            <div class="modal fade" id=org-slf4j-jcl-over-slf4j tabindex="-1" aria-labelledby="gridModalLabel" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="gridModalLabel">Dependents of org.slf4j:jcl-over-slf4j</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid bd-example-row">
+                                                <div class="row">
+
+                                                    <ol class="list-group list-group-flush list-group-numbered">
+                                                        <li class="list-group-item list-group-item-action">null:apollo-demo</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-openapi</li>
+                                                    </ol>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>org.yaml:snakeyaml</td>
+                        <td>2</td>
+                        <td>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#org-yaml-snakeyaml">
+                                See
+                            </button>
+
+                            <div class="modal fade" id=org-yaml-snakeyaml tabindex="-1" aria-labelledby="gridModalLabel" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="gridModalLabel">Dependents of org.yaml:snakeyaml</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid bd-example-row">
+                                                <div class="row">
+
+                                                    <ol class="list-group list-group-flush list-group-numbered">
+                                                        <li class="list-group-item list-group-item-action">null:apollo-client</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-portal</li>
+                                                    </ol>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>com.ctrip.framework.apollo:apollo-biz</td>
+                        <td>2</td>
+                        <td>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#com-ctrip-framework-apollo-apollo-biz">
+                                See
+                            </button>
+
+                            <div class="modal fade" id=com-ctrip-framework-apollo-apollo-biz tabindex="-1" aria-labelledby="gridModalLabel" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="gridModalLabel">Dependents of com.ctrip.framework.apollo:apollo-biz</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid bd-example-row">
+                                                <div class="row">
+
+                                                    <ol class="list-group list-group-flush list-group-numbered">
+                                                        <li class="list-group-item list-group-item-action">null:apollo-configservice</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-adminservice</li>
+                                                    </ol>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>org.springframework.boot:spring-boot-autoconfigure</td>
+                        <td>2</td>
+                        <td>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#org-springframework-boot-spring-boot-autoconfigure">
+                                See
+                            </button>
+
+                            <div class="modal fade" id=org-springframework-boot-spring-boot-autoconfigure tabindex="-1" aria-labelledby="gridModalLabel" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="gridModalLabel">Dependents of org.springframework.boot:spring-boot-autoconfigure</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid bd-example-row">
+                                                <div class="row">
+
+                                                    <ol class="list-group list-group-flush list-group-numbered">
+                                                        <li class="list-group-item list-group-item-action">null:apollo-client-config-data</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-client</li>
+                                                    </ol>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>org.eclipse.jetty:jetty-server</td>
+                        <td>2</td>
+                        <td>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#org-eclipse-jetty-jetty-server">
+                                See
+                            </button>
+
+                            <div class="modal fade" id=org-eclipse-jetty-jetty-server tabindex="-1" aria-labelledby="gridModalLabel" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="gridModalLabel">Dependents of org.eclipse.jetty:jetty-server</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid bd-example-row">
+                                                <div class="row">
+
+                                                    <ol class="list-group list-group-flush list-group-numbered">
+                                                        <li class="list-group-item list-group-item-action">null:apollo-core</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-portal</li>
+                                                    </ol>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>org.slf4j:slf4j-api</td>
+                        <td>2</td>
+                        <td>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#org-slf4j-slf4j-api">
+                                See
+                            </button>
+
+                            <div class="modal fade" id=org-slf4j-slf4j-api tabindex="-1" aria-labelledby="gridModalLabel" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="gridModalLabel">Dependents of org.slf4j:slf4j-api</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid bd-example-row">
+                                                <div class="row">
+
+                                                    <ol class="list-group list-group-flush list-group-numbered">
+                                                        <li class="list-group-item list-group-item-action">null:apollo-client</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-core</li>
+                                                    </ol>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>org.apache.logging.log4j:log4j-slf4j-impl</td>
+                        <td>2</td>
+                        <td>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#org-apache-logging-log4j-log4j-slf4j-impl">
+                                See
+                            </button>
+
+                            <div class="modal fade" id=org-apache-logging-log4j-log4j-slf4j-impl tabindex="-1" aria-labelledby="gridModalLabel" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="gridModalLabel">Dependents of org.apache.logging.log4j:log4j-slf4j-impl</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid bd-example-row">
+                                                <div class="row">
+
+                                                    <ol class="list-group list-group-flush list-group-numbered">
+                                                        <li class="list-group-item list-group-item-action">null:apollo-core</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-openapi</li>
+                                                    </ol>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>com.ctrip.framework.apollo:apollo-core</td>
+                        <td>3</td>
+                        <td>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#com-ctrip-framework-apollo-apollo-core">
+                                See
+                            </button>
+
+                            <div class="modal fade" id=com-ctrip-framework-apollo-apollo-core tabindex="-1" aria-labelledby="gridModalLabel" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="gridModalLabel">Dependents of com.ctrip.framework.apollo:apollo-core</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid bd-example-row">
+                                                <div class="row">
+
+                                                    <ol class="list-group list-group-flush list-group-numbered">
+                                                        <li class="list-group-item list-group-item-action">null:apollo-common</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-client</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-openapi</li>
+                                                    </ol>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>com.ctrip.framework.apollo:apollo-common</td>
+                        <td>2</td>
+                        <td>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#com-ctrip-framework-apollo-apollo-common">
+                                See
+                            </button>
+
+                            <div class="modal fade" id=com-ctrip-framework-apollo-apollo-common tabindex="-1" aria-labelledby="gridModalLabel" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="gridModalLabel">Dependents of com.ctrip.framework.apollo:apollo-common</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid bd-example-row">
+                                                <div class="row">
+
+                                                    <ol class="list-group list-group-flush list-group-numbered">
+                                                        <li class="list-group-item list-group-item-action">null:apollo-biz</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-portal</li>
+                                                    </ol>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>com.h2database:h2</td>
+                        <td>5</td>
+                        <td>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#com-h2database-h2">
+                                See
+                            </button>
+
+                            <div class="modal fade" id=com-h2database-h2 tabindex="-1" aria-labelledby="gridModalLabel" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="gridModalLabel">Dependents of com.h2database:h2</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid bd-example-row">
+                                                <div class="row">
+
+                                                    <ol class="list-group list-group-flush list-group-numbered">
+                                                        <li class="list-group-item list-group-item-action">null:apollo-assembly</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-configservice</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-adminservice</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-biz</li>
+                                                        <li class="list-group-item list-group-item-action">null:apollo-portal</li>
+                                                    </ol>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+    </div>
+
+
+    <div class="px-4">
+        <footer class="pt-5 my-5 text-muted border-top">MSA Nose &middot; &copy; 2022</footer>    </div>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js" ></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
