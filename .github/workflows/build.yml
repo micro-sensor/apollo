@@ -56,3 +56,5 @@ jobs:
       uses: codecov/codecov-action@v1
       with:
         file: ${{ github.workspace }}/apollo-*/target/site/jacoco/jacoco.xml
+    - name: Perform the microservices smells analysis.
+      uses: edson-a-soares/microsensor@development
