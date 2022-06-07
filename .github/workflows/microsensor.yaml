@@ -8,5 +8,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Perform the smells analysis.
-        id: analysis
         uses: edson-a-soares/microsensor@development
