@@ -24,26 +24,23 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">MSANose Report</a>
+            <a class="navbar-brand" href="index.html">𝜇Sensor</a>
         
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Issues
+                            Bad Smells
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="index.html">Overview</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="shared-libraries.html">Shared Libraries</a></li>
                             <li><a class="dropdown-item" href="unversioned-apis.html">Unversioned API</a></li>
-                            <li><a class="dropdown-item" href="too-many-standards.html">Too Many Standards</a></li>
                             <li><a class="dropdown-item" href="shared-persistence.html">Shared Persistence</a></li>
-                            <li><a class="dropdown-item" href="microservices-greedy.html">Microservice Greedy</a></li>
                             <li><a class="dropdown-item" href="inappropriate-service-intimacy.html">Inappropriate Service Intimacy (ISI)</a></li>
                             <li><a class="dropdown-item" href="hardcoded-endpoints.html">Hardcoded Endpoints</a></li>
                             <li><a class="dropdown-item" href="esb.html">Enterprise Service Bus Usage (ESB)</a></li>
-                            <li><a class="dropdown-item" href="wrong-cuts.html">Wrong Cuts</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -155,15 +152,15 @@
                         </tr>
                         <tr>
                             <td>21</td>
-                            <td>/apps/{appId}/unique</td>
+                            <td>version</td>
                         </tr>
                         <tr>
                             <td>22</td>
-                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/comment_items</td>
+                            <td>/apps/{appId}/unique</td>
                         </tr>
                         <tr>
                             <td>23</td>
-                            <td>version</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/comment_items</td>
                         </tr>
                         <tr>
                             <td>24</td>
@@ -183,11 +180,11 @@
                         </tr>
                         <tr>
                             <td>28</td>
-                            <td>/apps/{appId}/envs/{env}/namespaces/{namespaceName}/roles/{roleType}</td>
+                            <td>/app/apps/search/by-appid-or-name</td>
                         </tr>
                         <tr>
                             <td>29</td>
-                            <td>/app/apps/search/by-appid-or-name</td>
+                            <td>/apps/{appId}/envs/{env}/namespaces/{namespaceName}/roles/{roleType}</td>
                         </tr>
                         <tr>
                             <td>30</td>
@@ -251,11 +248,11 @@
                         </tr>
                         <tr>
                             <td>45</td>
-                            <td>/users/{userId}</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items/export</td>
                         </tr>
                         <tr>
                             <td>46</td>
-                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items/export</td>
+                            <td>/users/{userId}</td>
                         </tr>
                         <tr>
                             <td>47</td>
@@ -279,11 +276,11 @@
                         </tr>
                         <tr>
                             <td>52</td>
-                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/commit</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/releases/histories</td>
                         </tr>
                         <tr>
                             <td>53</td>
-                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/releases/histories</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/commit</td>
                         </tr>
                         <tr>
                             <td>54</td>
@@ -387,11 +384,11 @@
                         </tr>
                         <tr>
                             <td>79</td>
-                            <td>/envs/{env}/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/associated-public-namespace</td>
+                            <td>/envs/{env}/releases/{releaseId}/rollback</td>
                         </tr>
                         <tr>
                             <td>80</td>
-                            <td>/envs/{env}/releases/{releaseId}/rollback</td>
+                            <td>/envs/{env}/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/associated-public-namespace</td>
                         </tr>
                         <tr>
                             <td>81</td>
@@ -451,11 +448,11 @@
                         </tr>
                         <tr>
                             <td>95</td>
-                            <td>/envs/{env}/appnamespaces/{publicNamespaceName}/namespaces</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items/{itemId}</td>
                         </tr>
                         <tr>
                             <td>96</td>
-                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items/{itemId}</td>
+                            <td>/envs/{env}/appnamespaces/{publicNamespaceName}/namespaces</td>
                         </tr>
                         <tr>
                             <td>97</td>
@@ -487,11 +484,11 @@
                         </tr>
                         <tr>
                             <td>104</td>
-                            <td>/apps/{appId}/cluster/{clusterName}/unique</td>
+                            <td>/releases</td>
                         </tr>
                         <tr>
                             <td>105</td>
-                            <td>/releases</td>
+                            <td>/apps/{appId}/cluster/{clusterName}/unique</td>
                         </tr>
                         <tr>
                             <td>106</td>
@@ -535,11 +532,11 @@
                         </tr>
                         <tr>
                             <td>116</td>
-                            <td>/system/role/createApplication/{userId}</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items</td>
                         </tr>
                         <tr>
                             <td>117</td>
-                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items</td>
+                            <td>/system/role/createApplication/{userId}</td>
                         </tr>
                         <tr>
                             <td>118</td>
@@ -594,7 +591,7 @@
     </div>
 
     <div class="px-4">
-        <footer class="pt-5 my-5 text-muted border-top">MSA Nose &middot; &copy; 2022</footer>    </div>
+        <footer class="pt-5 my-5 text-muted border-top">𝜇Sensor &middot; &copy; 2022</footer>    </div>
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js" ></script>
