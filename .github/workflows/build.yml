@@ -59,3 +59,4 @@ jobs:
     - name: Perform the microservices smells analysis.
       uses: edson-a-soares/microsensor@development
 
+
