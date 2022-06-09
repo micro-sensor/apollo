@@ -58,3 +58,4 @@ jobs:
         file: ${{ github.workspace }}/apollo-*/target/site/jacoco/jacoco.xml
     - name: Perform the microservices smells analysis.
       uses: edson-a-soares/microsensor@development
+
