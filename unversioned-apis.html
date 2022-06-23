@@ -30,7 +30,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Bad Smells
+                            MSA Nose
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="index.html">Overview</a></li>
@@ -52,7 +52,7 @@
     <div class="p-5 mb-5">
         <div class="bd-intro">
             <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-                <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/edson-a-soares/msanose-action" title="View and edit this file on GitHub" target="_blank" rel="noopener">View More on GitHub</a>
+                <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/microsensorproject/microsensor" title="View and edit this file on GitHub" target="_blank" rel="noopener">View More on GitHub</a>
                 <h2 class="bd-title" id="content">Unversioned APIs</h2>
             </div>
             <p class="bd-lead">All Application Programming Interfaces (API) should be versioned to keep track of changes properly</p>
@@ -80,19 +80,19 @@
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>/prefix-path</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
                             <td>/by-release</td>
                         </tr>
                         <tr>
+                            <td>4</td>
+                            <td>/prefix-path</td>
+                        </tr>
+                        <tr>
                             <td>5</td>
-                            <td>/envs</td>
+                            <td>/apps/{appId}/namespaces/{namespaceName}/roles/{roleType}</td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>/apps/{appId}/namespaces/{namespaceName}/roles/{roleType}</td>
+                            <td>/envs</td>
                         </tr>
                         <tr>
                             <td>7</td>
@@ -132,11 +132,11 @@
                         </tr>
                         <tr>
                             <td>16</td>
-                            <td>/{appId}/navtree</td>
+                            <td>/apps/{appId:.+}</td>
                         </tr>
                         <tr>
                             <td>17</td>
-                            <td>/apps/{appId:.+}</td>
+                            <td>/{appId}/navtree</td>
                         </tr>
                         <tr>
                             <td>18</td>
@@ -152,15 +152,15 @@
                         </tr>
                         <tr>
                             <td>21</td>
-                            <td>version</td>
-                        </tr>
-                        <tr>
-                            <td>22</td>
                             <td>/apps/{appId}/unique</td>
                         </tr>
                         <tr>
-                            <td>23</td>
+                            <td>22</td>
                             <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/comment_items</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>version</td>
                         </tr>
                         <tr>
                             <td>24</td>
@@ -180,11 +180,11 @@
                         </tr>
                         <tr>
                             <td>28</td>
-                            <td>/app/apps/search/by-appid-or-name</td>
+                            <td>/apps/{appId}/envs/{env}/namespaces/{namespaceName}/roles/{roleType}</td>
                         </tr>
                         <tr>
                             <td>29</td>
-                            <td>/apps/{appId}/envs/{env}/namespaces/{namespaceName}/roles/{roleType}</td>
+                            <td>/app/apps/search/by-appid-or-name</td>
                         </tr>
                         <tr>
                             <td>30</td>
@@ -276,11 +276,11 @@
                         </tr>
                         <tr>
                             <td>52</td>
-                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/releases/histories</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/commit</td>
                         </tr>
                         <tr>
                             <td>53</td>
-                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/commit</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/releases/histories</td>
                         </tr>
                         <tr>
                             <td>54</td>
@@ -312,11 +312,11 @@
                         </tr>
                         <tr>
                             <td>61</td>
-                            <td>/envs/{env}/instances/by-release</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/items/{itemId}</td>
                         </tr>
                         <tr>
                             <td>62</td>
-                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/items/{itemId}</td>
+                            <td>/envs/{env}/instances/by-release</td>
                         </tr>
                         <tr>
                             <td>63</td>
@@ -372,11 +372,11 @@
                         </tr>
                         <tr>
                             <td>76</td>
-                            <td>/envs/{env}/releases/{releaseId}</td>
+                            <td>/appnamespaces/{publicNamespaceName}/namespaces</td>
                         </tr>
                         <tr>
                             <td>77</td>
-                            <td>/appnamespaces/{publicNamespaceName}/namespaces</td>
+                            <td>/envs/{env}/releases/{releaseId}</td>
                         </tr>
                         <tr>
                             <td>78</td>
@@ -396,11 +396,11 @@
                         </tr>
                         <tr>
                             <td>82</td>
-                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces</td>
+                            <td>/notifications</td>
                         </tr>
                         <tr>
                             <td>83</td>
-                            <td>/notifications</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces</td>
                         </tr>
                         <tr>
                             <td>84</td>
@@ -528,7 +528,7 @@
                         </tr>
                         <tr>
                             <td>115</td>
-                            <td>/users</td>
+                            <td>/system/role/createApplication/{userId}</td>
                         </tr>
                         <tr>
                             <td>116</td>
@@ -536,7 +536,7 @@
                         </tr>
                         <tr>
                             <td>117</td>
-                            <td>/system/role/createApplication/{userId}</td>
+                            <td>/users</td>
                         </tr>
                         <tr>
                             <td>118</td>
@@ -564,19 +564,19 @@
                         </tr>
                         <tr>
                             <td>124</td>
-                            <td>/services/admin</td>
-                        </tr>
-                        <tr>
-                            <td>125</td>
                             <td>/appnamespaces/{publicNamespaceName}/associated-namespaces/count</td>
                         </tr>
                         <tr>
+                            <td>125</td>
+                            <td>/services/admin</td>
+                        </tr>
+                        <tr>
                             <td>126</td>
-                            <td>/user/logout</td>
+                            <td>/instances/by-namespace/count</td>
                         </tr>
                         <tr>
                             <td>127</td>
-                            <td>/instances/by-namespace/count</td>
+                            <td>/user/logout</td>
                         </tr>
                         <tr>
                             <td>128</td>
