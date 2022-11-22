@@ -80,11 +80,11 @@
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>/by-release</td>
+                            <td>/prefix-path</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>/prefix-path</td>
+                            <td>/by-release</td>
                         </tr>
                         <tr>
                             <td>5</td>
@@ -132,11 +132,11 @@
                         </tr>
                         <tr>
                             <td>16</td>
-                            <td>/apps/{appId:.+}</td>
+                            <td>/{appId}/navtree</td>
                         </tr>
                         <tr>
                             <td>17</td>
-                            <td>/{appId}/navtree</td>
+                            <td>/apps/{appId:.+}</td>
                         </tr>
                         <tr>
                             <td>18</td>
@@ -180,11 +180,11 @@
                         </tr>
                         <tr>
                             <td>28</td>
-                            <td>/apps/{appId}/envs/{env}/namespaces/{namespaceName}/roles/{roleType}</td>
+                            <td>/app/apps/search/by-appid-or-name</td>
                         </tr>
                         <tr>
                             <td>29</td>
-                            <td>/app/apps/search/by-appid-or-name</td>
+                            <td>/apps/{appId}/envs/{env}/namespaces/{namespaceName}/roles/{roleType}</td>
                         </tr>
                         <tr>
                             <td>30</td>
@@ -248,7 +248,7 @@
                         </tr>
                         <tr>
                             <td>45</td>
-                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items/export</td>
+                            <td>openapiAppController/apps/authorized</td>
                         </tr>
                         <tr>
                             <td>46</td>
@@ -256,7 +256,7 @@
                         </tr>
                         <tr>
                             <td>47</td>
-                            <td>openapiAppController/apps/authorized</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items/export</td>
                         </tr>
                         <tr>
                             <td>48</td>
@@ -312,11 +312,11 @@
                         </tr>
                         <tr>
                             <td>61</td>
-                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/items/{itemId}</td>
+                            <td>/envs/{env}/instances/by-release</td>
                         </tr>
                         <tr>
                             <td>62</td>
-                            <td>/envs/{env}/instances/by-release</td>
+                            <td>/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/items/{itemId}</td>
                         </tr>
                         <tr>
                             <td>63</td>
@@ -372,11 +372,11 @@
                         </tr>
                         <tr>
                             <td>76</td>
-                            <td>/appnamespaces/{publicNamespaceName}/namespaces</td>
+                            <td>/envs/{env}/releases/{releaseId}</td>
                         </tr>
                         <tr>
                             <td>77</td>
-                            <td>/envs/{env}/releases/{releaseId}</td>
+                            <td>/appnamespaces/{publicNamespaceName}/namespaces</td>
                         </tr>
                         <tr>
                             <td>78</td>
@@ -384,11 +384,11 @@
                         </tr>
                         <tr>
                             <td>79</td>
-                            <td>/envs/{env}/releases/{releaseId}/rollback</td>
+                            <td>/envs/{env}/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/associated-public-namespace</td>
                         </tr>
                         <tr>
                             <td>80</td>
-                            <td>/envs/{env}/apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/associated-public-namespace</td>
+                            <td>/envs/{env}/releases/{releaseId}/rollback</td>
                         </tr>
                         <tr>
                             <td>81</td>
@@ -448,11 +448,11 @@
                         </tr>
                         <tr>
                             <td>95</td>
-                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items/{itemId}</td>
+                            <td>/envs/{env}/appnamespaces/{publicNamespaceName}/namespaces</td>
                         </tr>
                         <tr>
                             <td>96</td>
-                            <td>/envs/{env}/appnamespaces/{publicNamespaceName}/namespaces</td>
+                            <td>/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName}/items/{itemId}</td>
                         </tr>
                         <tr>
                             <td>97</td>
@@ -464,11 +464,11 @@
                         </tr>
                         <tr>
                             <td>99</td>
-                            <td>/releases/{releaseId}/rollback</td>
+                            <td>/items/{itemId}</td>
                         </tr>
                         <tr>
                             <td>100</td>
-                            <td>/items/{itemId}</td>
+                            <td>/releases/{releaseId}/rollback</td>
                         </tr>
                         <tr>
                             <td>101</td>
@@ -520,15 +520,15 @@
                         </tr>
                         <tr>
                             <td>113</td>
-                            <td>/apps/{appId}/miss_envs</td>
-                        </tr>
-                        <tr>
-                            <td>114</td>
                             <td>openapiAppController/apps</td>
                         </tr>
                         <tr>
+                            <td>114</td>
+                            <td>/apps/{appId}/miss_envs</td>
+                        </tr>
+                        <tr>
                             <td>115</td>
-                            <td>/system/role/createApplication/{userId}</td>
+                            <td>/users</td>
                         </tr>
                         <tr>
                             <td>116</td>
@@ -536,7 +536,7 @@
                         </tr>
                         <tr>
                             <td>117</td>
-                            <td>/users</td>
+                            <td>/system/role/createApplication/{userId}</td>
                         </tr>
                         <tr>
                             <td>118</td>
@@ -564,19 +564,19 @@
                         </tr>
                         <tr>
                             <td>124</td>
-                            <td>/appnamespaces/{publicNamespaceName}/associated-namespaces/count</td>
-                        </tr>
-                        <tr>
-                            <td>125</td>
                             <td>/services/admin</td>
                         </tr>
                         <tr>
+                            <td>125</td>
+                            <td>/appnamespaces/{publicNamespaceName}/associated-namespaces/count</td>
+                        </tr>
+                        <tr>
                             <td>126</td>
-                            <td>/instances/by-namespace/count</td>
+                            <td>/user/logout</td>
                         </tr>
                         <tr>
                             <td>127</td>
-                            <td>/user/logout</td>
+                            <td>/instances/by-namespace/count</td>
                         </tr>
                         <tr>
                             <td>128</td>
