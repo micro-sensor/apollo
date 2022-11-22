@@ -56,6 +56,7 @@ jobs:
       uses: codecov/codecov-action@v1
       with:
         file: ${{ github.workspace }}/apollo-*/target/site/jacoco/jacoco.xml
+
+    # MicroSensor Analysis
     - name: Perform static source code analysis
       uses: microsensorproject/microsensor@development
-
