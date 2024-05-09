@@ -1,4 +1,4 @@
-name: MicroSensor
+name: MicroSensor Integration
 
 on: [push]
 
